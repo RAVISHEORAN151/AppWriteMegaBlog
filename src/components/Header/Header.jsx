@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useSelector } from "react-redux";
 import { Link, NavLink } from "react-router-dom";
 
-import Container from "../container/Container";
+import Container from "../container/container";
 import Logo from "../Logo";
 import LogoutBtn from "./LogoutBtn";
 
@@ -55,7 +55,7 @@ function Header() {
                 MegaBlog
               </h1>
 
-              <p className="text-x tracking-[0.20em] text-slate-200">
+              <p className="text-xs tracking-[0.20em] text-slate-200">
                 WRITE • SHARE • GROW
               </p>
             </div>
