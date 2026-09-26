@@ -1,0 +1,63 @@
+.logo-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.logo-glow {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    #22d3ee,
+    #8b5cf6,
+    #d946ef
+  );
+
+  opacity: 0.5;
+  filter: blur(20px);
+  transition: all 0.4s ease;
+}
+
+
+ 
+
+/* Font Awesome icon */
+
+.logo-icon {
+  color: #a78bfa;
+
+  text-shadow:
+    0 0 6px #c4b5fd,
+    0 0 12px #8b5cf6,
+    0 0 24px #6366f1;
+
+  transition: color 0.35s ease, text-shadow 0.35s ease;
+}
+
+
+.logo-wrapper:hover .logo-box {
+  transform: translateY(-5px) rotate(6deg) scale(1.06);
+
+}
+
+.logo-wrapper:hover .logo-glow {
+  transform: scale(1.35);
+  opacity: 0.9;
+  filter: blur(25px);
+}
+
+.logo-wrapper:hover .logo-icon,
+.logo-wrapper:hover .logo-icon::before {
+  color: #67e8f9;
+
+  text-shadow:
+    0 0 8px #cffafe,
+    0 0 18px #22d3ee,
+    0 0 35px #a855f7;
+}
