@@ -2,7 +2,9 @@ import React, {useState} from 'react'
 import {Link, useNavigate} from 'react-router-dom' // what it do
 import appwriteService from '../appwrite/config' // its work
 import { login as authLogin } from '../store/authSlice' // what it do
-import {Button, Input, Logo} from "./index" // why need it
+import Button from "./Button";
+import Input from "./container/Input";
+import Logo from "./Logo";
 import {useDispatch} from "react-redux" // why needed
 import {useForm} from "react-hook-form" // what can it do
 
