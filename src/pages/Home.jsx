@@ -54,7 +54,7 @@ function Home() {
             </p>
             </div>
 
-            <h1 className="mb-5 bg-gradient-to-r from-cyan-300 via-violet-300 to-fuchsia-300 bg-clip-text text-4xl font-extrabold tracking-tight text-transparent sm:text-5xl">
+            <h1 className="inline-block mb-4 bg-gradient-to-r from-cyan-300 via-violet-300 to-fuchsia-300 bg-clip-text text-3xl font-extrabold tracking-tight text-transparent sm:text-5xl p-2">
               Ideas worth sharing.
             </h1>
 
@@ -97,7 +97,10 @@ function Home() {
             </div>
           ) : (
             <div className="flex flex-wrap">
-              {posts.map((post) => (
+              {posts
+              .sort((a,b) => new Date(b.$createdAt) - new Date(a.$createdAt))
+              .slice(0,1)
+              .map((post) => (
                 <div
                   key={post.$id}
                   className="w-full p-3 sm:w-1/2 lg:w-1/3 xl:w-1/4"

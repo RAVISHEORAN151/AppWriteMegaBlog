@@ -31,9 +31,10 @@ const userData = authState?.userData
            const file = data.image?.[0]
                             ? await appwriteService.uploadFile(data.image[0])
                             : null
-            
+            let fileId = post.featureImage;
             if(file){
-                await appwriteService.deleteFile(post.featureImage)
+                await appwriteService.deleteFile(post.featureImage);
+                fileId = file.$id;
             }
 
          const dbPost = await appwriteService.updatePost(post.$id, {

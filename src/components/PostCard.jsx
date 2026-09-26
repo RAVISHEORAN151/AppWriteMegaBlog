@@ -5,6 +5,7 @@ function PostCard({
   $id,
   title,
   featureImage,
+  $createdAt
 }) {
  return (
   <Link to={`/post/${$id}`}>
@@ -20,6 +21,12 @@ function PostCard({
       )}
 
       <h2 className="text-xl font-bold text-slate-100">{title}</h2>
+      <p className="text-sm text-slate-400">
+      {new Date($createdAt).toLocaleString("en-IN", {
+        dateStyle: "medium",
+        timeStyle: "short",
+      })}
+    </p>
     </div>
   </Link>
 );
