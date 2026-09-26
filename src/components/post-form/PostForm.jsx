@@ -101,7 +101,7 @@ const userData = authState?.userData
   return (
   <form
     onSubmit={handleSubmit(submit)}
-    className="flex flex-wrap rounded-2xl border border-violet-400/20 bg-slate-900/60 p-6 shadow-[0_10px_30px_rgba(15,23,42,0.65)] backdrop-blur-xl"
+    className="flex flex-wrap rounded-2xl border border-violet-400/20 bg-slate-900/60 p-6 shadow-[0_10px_30px_rgba(15,23,42,0.65)] backdrop-blur-xl text-slate-100 "
   >
     <div className="w-full px-2 lg:w-2/3">
       <Input
@@ -128,6 +128,7 @@ const userData = authState?.userData
         name="content"
         control={control}
         defaultValue={getValues("content")}
+        className="text-slate-100"
       />
     </div>
 
